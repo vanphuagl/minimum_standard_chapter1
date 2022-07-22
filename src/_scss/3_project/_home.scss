@@ -1,0 +1,56 @@
+/*------------------------------------------------------------
+Css of home page
+------------------------------------------------------------*/
+.p-home {
+    .l-wrapper {
+        // border: 30px solid transparent;
+        // border-image: url("../../_public/assets/img/bg-header.jpg") 30 round;
+
+        // @include sp {
+        //     border: 15px solid transparent;
+        //     border-image: url("../../_public/assets/img/bg-header.jpg") 15 round;
+        // }
+    }
+
+    // .c-mainvisual {
+    //   margin-top: -63px;
+    //   padding: 0;
+    //   height: 700px;
+    //   background: url("/assets/img/bg-header.jpg") no-repeat center;
+    //   background-size: cover;
+    //   color: #fff;
+
+    //   &__inner {
+    //     position: relative;
+    //     top: 50%;
+    //     transform: translate(0%, -50%);
+    //     padding-top: 63px;
+    //     text-align: center;
+    //   }
+
+    //   h2 {
+    //     width: 100%;
+    //     flex-basis: 100%;
+    //     font-size: 8rem;
+    //     font-weight: 400;
+    //   }
+
+    //   p {
+    //     width: 100%;
+    //     font-size: 2rem;
+    //   }
+
+    //   .c-btn1 {
+    //     margin-top: 50px;
+    //   }
+
+    //   //==================
+    //   &--subpage {
+    //     height: 300px;
+
+    //     h2 {
+    //       font-size: 5rem;
+    //     }
+    //   }
+    // }
+}

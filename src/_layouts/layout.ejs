@@ -8,7 +8,18 @@
     <title>
       <%= (typeof title != "undefined" ? title : "Page title") %>
     </title>
+
     {{ meta }}
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    >
+
+    {{ style }}
     <script type="module" src="/_scss/style.js"></script>
     {{ head }}
   </head>

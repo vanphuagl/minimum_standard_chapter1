@@ -12,6 +12,43 @@
 }
 
 //============================================
+// mid
+//============================================
+@mixin mid($flex: false) {
+    @if $flex == false {
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        position: absolute;
+    } @else {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@mixin midimg($maxwidth: initial) {
+    max-width: $maxwidth;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    @include mid;
+}
+
+//============================================
+// transform
+//============================================
+
+@mixin transform($args) {
+    transform: $args;
+    transform: $args;
+    transform: $args;
+    transform: $args;
+    transform: $args;
+}
+
+//============================================
 // breakpoint
 //============================================
 @mixin sp {

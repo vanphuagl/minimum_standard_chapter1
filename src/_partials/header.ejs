@@ -1,23 +1,56 @@
 <header class="c-header">
-  <h1 class="c-header__logo"><a href="<%= BASE_URL %>index.html"><img src="/assets/img/logo.png" alt="Logo"></a></h1>
-  <nav class="c-gnav">
+  <!-- MENU MOBILE -->
+  <div class="c-header__menu">
+    <span></span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="c-header__nav" id="nav-menu">
     <ul>
       <% if (typeof linklists != 'undefined') { %>
-        <% linklists.main && linklists.main.forEach(link => { %>
+      <% linklists.main && linklists.main.forEach(link => { %>
+      <li>
+        <a class="c-header__link" <% if (link.current || link.active) { %>class="is-active" <% } %>
+          href="<%= link.url %>"><%= link.title %></a>
+        <% if (link.links) { %>
+        <ul>
+          <% link.links.forEach(child_link => { %>
           <li>
-            <a <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %></a>
-            <% if (link.links) { %>
-              <ul>
-                <% link.links.forEach(child_link => { %>
-                  <li>
-                    <a <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%= child_link.title %></a>
-                  </li>
-                <% }) %>
-              </ul>
-            <% } %>
+            <a <% if (child_link.current) { %>class="is-active" <% } %>
+              href="<%= child_link.url %>"><%= child_link.title %></a>
           </li>
-        <% }) %>
+          <% }) %>
+        </ul>
+        <% } %>
+      </li>
+      <% }) %>
       <% } %>
     </ul>
   </nav>
+
+  <!-- LEAF && DROP -->
+  <!-- <figure class="c-header__leaf1">
+    <img src="../_public/assets/img/top/leaf1.png" alt="leaf1">
+  </figure>
+  <figure class="c-header__leaf2">
+    <img src="../_public/assets/img/top/leaf2.png" alt="leaf2">
+  </figure> -->
+  <!-- <figure class="c-header__drop1">
+      <img src="../_public/assets/img/top/drop1.png" alt="drop1" />
+    </figure>
+    <figure class="c-header__drop2">
+      <img src="../_public/assets/img/top/drop2.png" alt="drop2" />
+    </figure>
+    <figure class="c-header__drop3">
+      <img src="../_public/assets/img/top/drop3.png" alt="drop3" />
+    </figure>
+    <figure class="c-header__drop4">
+      <img src="../_public/assets/img/top/drop4.png" alt="drop4" />
+    </figure>
+    <figure class="c-header__drop5">
+      <img src=../_public/assets/img/top/drop5.png" alt="drop5" />
+    </figure>
+    <figure class="c-header__drop6">
+      <img src="../_public/assets/img/top/drop6.png" alt="drop6" />
+    </figure> -->
 </header>
