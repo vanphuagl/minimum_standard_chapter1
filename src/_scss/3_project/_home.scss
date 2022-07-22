@@ -2,55 +2,113 @@
 Css of home page
 ------------------------------------------------------------*/
 .p-home {
-    .l-wrapper {
-        // border: 30px solid transparent;
-        // border-image: url("../../_public/assets/img/bg-header.jpg") 30 round;
+  /* ----------------------------------- HERO ---------------------------------- */
+  .p-hero {
+    padding-top: 100px;
 
-        // @include sp {
-        //     border: 15px solid transparent;
-        //     border-image: url("../../_public/assets/img/bg-header.jpg") 15 round;
-        // }
+    @include sp {
+      padding-top: 45px;
     }
 
-    // .c-mainvisual {
-    //   margin-top: -63px;
-    //   padding: 0;
-    //   height: 700px;
-    //   background: url("/assets/img/bg-header.jpg") no-repeat center;
-    //   background-size: cover;
-    //   color: #fff;
+    &__container {
+      max-width: 1120px;
+      margin: auto;
+      // padding: 0 30px;
 
-    //   &__inner {
-    //     position: relative;
-    //     top: 50%;
-    //     transform: translate(0%, -50%);
-    //     padding-top: 63px;
-    //     text-align: center;
-    //   }
+      @include sp {
+      }
+    }
 
-    //   h2 {
-    //     width: 100%;
-    //     flex-basis: 100%;
-    //     font-size: 8rem;
-    //     font-weight: 400;
-    //   }
+    &__wrapper {
+      background-image: url("../../_public/assets/img/bg_main.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50px;
+      height: 480px;
+      text-align: center;
 
-    //   p {
-    //     width: 100%;
-    //     font-size: 2rem;
-    //   }
+      @include sp {
+      }
+    }
 
-    //   .c-btn1 {
-    //     margin-top: 50px;
-    //   }
+    &__content {
+      //   padding-left: 180px;
+      width: 55%;
+      padding-top: 100px;
 
-    //   //==================
-    //   &--subpage {
-    //     height: 300px;
+      @include sp {
+      }
 
-    //     h2 {
-    //       font-size: 5rem;
-    //     }
-    //   }
-    // }
+      & > figure {
+        margin-bottom: 6px;
+        margin-right: 5px;
+
+        @include sp {
+        }
+
+        & > img:first-child {
+          display: none;
+          @include sp {
+            display: block;
+          }
+        }
+      }
+
+      & > h2 {
+        position: relative;
+        font-size: 1.6rem;
+        line-height: 2.5;
+        letter-spacing: 1.6px;
+
+        @include sp {
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 60px;
+          height: 2px;
+          background-color: $black-cl;
+          transform: translateX(-55%);
+
+          @include sp {
+          }
+        }
+      }
+    }
+
+    &__info {
+      & > span {
+        font-size: 1.6rem;
+        line-height: 2.5;
+        letter-spacing: 1.6px;
+      }
+
+      & > p {
+        font-size: 3rem;
+        line-height: 1.3;
+        letter-spacing: 3px;
+      }
+    }
+
+    &__btn {
+      display: block;
+      margin: auto;
+      width: 306px;
+      height: 55px;
+      background-color: #25a989;
+      border-radius: 27px;
+      margin-top: 21px;
+
+      & > p {
+        font-size: 2.4rem;
+        color: $white-cl;
+        line-height: 55px;
+        letter-spacing: 6.48px;
+      }
+    }
+  }
 }

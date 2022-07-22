@@ -24,6 +24,7 @@ body {
         min-width: 320px;
     }
 }
+
 //-------------------------------------------------------
 main {
     // padding: 0px 0 100px;
@@ -38,4 +39,14 @@ section {
     width: $base-width;
     margin: 0 auto;
 }
+
 //-------------------------------------------------------
+.l-wrapper {
+    border: 30px solid transparent;
+    border-image: url("../../_public/assets/img/bg-header.jpg") 30 round;
+
+    @include sp {
+        border: 15px solid transparent;
+        border-image: url("../../_public/assets/img/bg-header.jpg") 15 round;
+    }
+}
