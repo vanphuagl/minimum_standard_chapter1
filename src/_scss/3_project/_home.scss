@@ -12,7 +12,8 @@ Css of home page
 
     &__container {
       max-width: 1180px;
-      padding: 0 30px;
+      // padding: 0 30px;
+      padding: 0 22px 0 40px;
       margin: auto;
 
       @include sp {
@@ -55,7 +56,7 @@ Css of home page
       }
 
       figure {
-        margin-bottom: 16px;
+        margin-bottom: 15px;
         margin-right: 5px;
 
         @include sp {
@@ -70,7 +71,7 @@ Css of home page
         font-size: 1.6rem;
         line-height: 4;
         letter-spacing: 1.6px;
-        margin-left: -5px;
+        margin-left: -6px;
 
         @include sp {
           font-size: 3rem;
@@ -154,7 +155,7 @@ Css of home page
         font-size: 2.4rem;
         color: $white-cl;
         line-height: 55px;
-        letter-spacing: 6.48px;
+        letter-spacing: 4.5px;
       }
 
       @include sp {
@@ -175,7 +176,7 @@ Css of home page
   /* ----------------------------------- MENTHA OIL EVERY DAY ---------------------------------- */
   .p-everyday {
     height: 688px;
-    padding-top: 100px;
+    padding-top: 75px;
 
     @include sp {
       height: auto;
@@ -206,20 +207,23 @@ Css of home page
       position: absolute;
       top: 0;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-49%);
       width: 100%;
       text-align: center;
       color: $black-cl;
+      margin-top: -5px;
 
       span {
         font-size: 2rem;
         letter-spacing: 2px;
+        margin-right: 10px;     
       }
 
       h2 {
         font-size: 4.6rem;
         line-height: 50px;
-        letter-spacing: 9px;
+        letter-spacing: 9.15px;
+        margin-right: 3px;
       }
 
       @include sp {
@@ -257,6 +261,8 @@ Css of home page
     &__list1 {
       display: flex;
       justify-content: center;
+      margin-top: 5px;
+      margin-left: 12px;
 
       @include sp {
         flex-wrap: wrap;
@@ -268,7 +274,8 @@ Css of home page
     &__list2 {
       display: flex;
       justify-content: center;
-      margin-left: 70px;
+      margin-top: -10px;
+      margin-left: 80px;
 
       @include sp {
         flex-wrap: wrap;
@@ -327,7 +334,6 @@ Css of home page
           position: relative;
           width: 237px;
           margin-top: 137px;
-          padding-left: 2px;
         }
       }
 
@@ -356,6 +362,7 @@ Css of home page
           position: relative;
           width: 226px;
           margin-top: 108px;
+          // margin-right: 100px;
         }
       }
 
@@ -383,6 +390,7 @@ Css of home page
           position: relative;
           width: 257px;
           margin-top: 21px;
+          margin-right: 55px;
         }
       }
 
@@ -414,7 +422,7 @@ Css of home page
     &__label2 {
       position: absolute;
       top: -52px;
-      left: 20px;
+      left: 22px;
       transform: translateX(-50%);
 
       @include sp {
@@ -532,7 +540,7 @@ Css of home page
     }
 
     &__info {
-      padding-left: 6px;
+      padding-left: 8px;
       transform: translateY(-35px);
       position: absolute;
       top: 50%;
@@ -540,24 +548,27 @@ Css of home page
       right: 0;
       color: $main-text-cl;
       font-size: 1.4rem;
-      line-height: 1.5;
+      line-height: 1.8;
       letter-spacing: 1.2px;
 
       &.p-list1 {
+        &__info1 {
+          transform: translate(3px ,-37px);
+        }
         &__info2 {
           right: 5px;
-          transform: translateY(-25px);
+          transform: translate(8px ,-28px);
         }
 
         &__info3 {
           right: 3px;
-          padding-left: 20px;
-          transform: translateY(-25px);
+          padding-left: 18px;
+          transform: translate(2px ,-27px);
         }
 
         &__info4 {
           right: 1px;
-          transform: translateY(-14px);
+          transform: translate(2px , -16px);
           padding-left: 18px;
         }
       }
@@ -581,7 +592,7 @@ Css of home page
           left: -4px;
           right: auto;
           padding-right: 15px;
-          transform: translateY(-34px);
+          transform: translateY(-37px);
         }
 
         &__info4 {
