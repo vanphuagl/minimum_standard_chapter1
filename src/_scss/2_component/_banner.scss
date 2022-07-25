@@ -97,7 +97,7 @@
         text-align: center;
 
         span {
-            color: #333;
+            color: $main-text-cl;
             font-weight: 400;
             font-size: 2rem;
             font-family: "Hiragino Mincho Pro";
@@ -106,7 +106,7 @@
         }
 
         h2 {
-            color: #333;
+            color: $main-text-cl;
             font-weight: 400;
             font-size: 4.5rem;
             letter-spacing: 4.5px;

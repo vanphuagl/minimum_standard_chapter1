@@ -163,3 +163,26 @@ const renderQA = (qa) => {
   });
 };
 renderQA(qas);
+
+/*=============== SCROLL ACTIVE LINK ===============*/
+const sections = document.querySelectorAll("section[id]");
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 50,
+      sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".c-header__nav a[href*=" + sectionId + "]")
+        .classList.add("is-active");
+    } else {
+      document
+        .querySelector(".c-header__nav a[href*=" + sectionId + "]")
+        .classList.remove("is-active");
+    }
+  });
+}
+window.addEventListener("scroll", scrollActive);

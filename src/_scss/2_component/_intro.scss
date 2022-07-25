@@ -1,227 +1,241 @@
 .p-intro {
-    margin-bottom: -6px;
+  margin-bottom: -6px;
+
+  @include sp {
+    margin-bottom: -3px;
+  }
+
+  &__container {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
 
     @include sp {
-        margin-bottom: -3px;
+      max-width: 345px;
+      padding: 0 15px;
+    }
+  }
+
+  &__content {
+    margin-top: 35px;
+    padding-bottom: 31px;
+    border-bottom: 1px solid $green-cl;
+
+    @include sp {
+      margin-top: 17.5px;
+      padding-bottom: 15.5px;
+      border-bottom: unset;
+      pointer-events: none;
+      display: none;
+
+      &.p-content1,
+      &.p-content2,
+      &.p-content3 {
+        display: block;
+      }
+    }
+  }
+
+  &__content:hover &__info {
+    figure {
+      img {
+        transform: translateX(120%);
+      }
+    }
+  }
+
+  &__heading {
+    display: flex;
+  }
+
+  &__info {
+    position: relative;
+    margin-top: 20px;
+    padding-right: 43px;
+    color: $main-text-cl;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: 1.4px;
+    transition: all 0.3s ease-in-out;
+
+    figure {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(-85%);
+
+      img {
+        transform: translateX(0);
+        transition: 0.7s transform;
+      }
     }
 
-    &__container {
-        max-width: 900px;
-        margin: auto;
-        padding: 0 20px;
-
-        @include sp {
-            max-width: 345px;
-            padding: 0 15px;
-        }
+    p {
+      display: none;
+      cursor: pointer;
+      pointer-events: all;
     }
 
-    &__content {
-        margin-top: 35px;
-        padding-bottom: 31px;
-        border-bottom: 1px solid #176b6a;
+    @include sp {
+      font-size: 2.6rem;
+      line-height: 1.7;
+      letter-spacing: 1.3px;
+      margin-top: 10px;
+      height: auto;
+      max-height: 0;
+      padding-right: 0;
+      overflow-y: hidden;
 
-        @include sp {
-            margin-top: 17.5px;
-            padding-bottom: 15.5px;
-            border-bottom: unset;
-            pointer-events: none;
-            display: none;
-
-            &.p-content1,
-            &.p-content2,
-            &.p-content3 {
-                display: block;
-            }
-        }
-    }
-
-    &__heading {
-        display: flex;
-    }
-
-    &__info {
-        position: relative;
-        margin-top: 20px;
-        padding-right: 43px;
-        color: #333;
-        font-size: 1.4rem;
-        line-height: 1.5;
-        letter-spacing: 1.4px;
-        transition: all 0.3s ease-in-out;
-
-        figure {
-            position: absolute;
-            right: 0;
-            top: 0;
-            transform: translateY(-85%);
-        }
-
-        p {
-            display: none;
-            cursor: pointer;
-            pointer-events: all;
-        }
-
-        @include sp {
-            font-size: 2.6rem;
-            line-height: 1.7;
-            letter-spacing: 1.3px;
-            margin-top: 10px;
-            height: auto;
-            max-height: 0;
-            padding-right: 0;
-            overflow-y: hidden;
-
-            figure {
-                display: none;
-            }
-
-            p {
-                display: block;
-                max-width: fit-content;
-                font-size: 2.6rem;
-                font-family: "Kozuka Gothic Pr6N";
-                font-weight: 400;
-                line-height: 1.2;
-                letter-spacing: 1.3px;
-                color: #176b6a;
-                margin-top: 17.5px;
-                margin-bottom: 20px;
-                border-bottom: 1px solid #176b6a;
-                text-align: right;
-                margin-left: auto;
-            }
-        }
-    }
-
-    /* ------------------------------ SHOW CONTENT ------------------------------ */
-    &__item.is-showcontent > &__info {
-        @include sp {
-            max-height: 400px;
-        }
-    }
-
-    &__item.is-showcontent + &__showinfo {
-        @include sp {
-            figure {
-                &:first-child {
-                    display: block;
-                }
-
-                &:last-child {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    &__showinfo {
+      figure {
         display: none;
-        cursor: pointer;
-        pointer-events: all;
-        transition: all 0.3s ease-in-out;
+      }
 
-        &:hover {
-            opacity: 0.7;
+      p {
+        display: block;
+        max-width: fit-content;
+        font-size: 2.6rem;
+        font-family: "Kozuka Gothic Pr6N";
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 1.3px;
+        color: $green-cl;
+        margin-top: 17.5px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $green-cl;
+        text-align: right;
+        margin-left: auto;
+      }
+    }
+  }
+
+  /* ------------------------------ SHOW CONTENT ------------------------------ */
+  &__item.is-showcontent > &__info {
+    @include sp {
+      max-height: 400px;
+    }
+  }
+
+  &__item.is-showcontent + &__showinfo {
+    @include sp {
+      figure {
+        &:first-child {
+          display: block;
         }
 
-        @include sp {
-            display: block;
-            position: relative;
-            height: 20px;
-            margin-top: 10px;
-            border-radius: 7.5px;
-            background-color: #176b6a;
-
-            figure {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-                img {
-                    width: 35px;
-                    height: 15px;
-                }
-
-                &:first-child {
-                    display: none;
-                }
-            }
+        &:last-child {
+          display: none;
         }
+      }
+    }
+  }
+
+  &__showinfo {
+    display: none;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
     }
 
-    &__title {
-        padding-top: 22px;
+    @include sp {
+      display: block;
+      position: relative;
+      height: 20px;
+      margin-top: 10px;
+      border-radius: 7.5px;
+      background-color: $green-cl;
 
-        span {
-            font-size: 1.4rem;
-            color: #333;
-            line-height: 22px;
-            letter-spacing: 1.4px;
+      figure {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+          width: 35px;
+          height: 15px;
         }
 
-        h2 {
-            font-size: 2.5rem;
-            color: #333;
-            line-height: 1.2;
-            letter-spacing: 2.5px;
+        &:first-child {
+          display: none;
         }
+      }
+    }
+  }
 
-        @include sp {
-            padding-top: 0;
-            padding-right: 10px;
+  &__title {
+    padding-top: 22px;
 
-            span {
-                font-size: 2.2rem;
-                line-height: 2;
-                letter-spacing: 1.1px;
-            }
-
-            h2 {
-                font-size: 3rem;
-                line-height: 1.7;
-                letter-spacing: 1.5px;
-            }
-        }
+    span {
+      font-size: 1.4rem;
+      color: $main-text-cl;
+      line-height: 22px;
+      letter-spacing: 1.4px;
     }
 
-    @for $i from 1 through 11 {
-        &__image#{$i} {
-            background-image: url("../../_public/assets/img/intro/img_column#{$i}.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 275px;
-            height: 100px;
-            border-radius: 10px;
-            position: relative;
-            margin-right: 15px;
-
-            img {
-                position: absolute;
-                left: 15px;
-                bottom: 18px;
-            }
-
-            @include sp {
-                background-image: none;
-                border-radius: 0;
-                height: auto;
-                min-width: 79.5px;
-                width: 79.5px;
-                margin-right: 10px;
-                margin-top: 7.5px;
-
-                img {
-                    width: 79.5px;
-                    height: 32.5px;
-                    position: relative;
-                    left: auto;
-                    bottom: auto;
-                }
-            }
-        }
+    h2 {
+      font-size: 2.5rem;
+      color: $main-text-cl;
+      line-height: 1.2;
+      letter-spacing: 2.5px;
+      font-weight: 400;
     }
+
+    @include sp {
+      padding-top: 0;
+      padding-right: 10px;
+
+      span {
+        font-size: 2.2rem;
+        line-height: 2;
+        letter-spacing: 1.1px;
+      }
+
+      h2 {
+        font-size: 3rem;
+        line-height: 1.7;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+
+  @for $i from 1 through 11 {
+    &__image#{$i} {
+      background-image: url("../../_public/assets/img/intro/img_column#{$i}.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 275px;
+      height: 100px;
+      border-radius: 10px;
+      position: relative;
+      margin-right: 15px;
+
+      img {
+        position: absolute;
+        left: 15px;
+        bottom: 18px;
+      }
+
+      @include sp {
+        background-image: none;
+        border-radius: 0;
+        height: auto;
+        min-width: 79.5px;
+        width: 79.5px;
+        margin-right: 10px;
+        margin-top: 7.5px;
+
+        img {
+          width: 79.5px;
+          height: 32.5px;
+          position: relative;
+          left: auto;
+          bottom: auto;
+        }
+      }
+    }
+  }
 }

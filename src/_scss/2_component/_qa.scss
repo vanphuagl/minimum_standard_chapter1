@@ -8,7 +8,7 @@
         padding: 85px 85px 0;
 
         h2 {
-            color: #176b6a;
+            color: $green-cl;
             font-weight: 400;
             font-size: 3.6rem;
             line-height: 1;
@@ -33,7 +33,7 @@
 
         dd {
             margin-top: 10px;
-            color: #333;
+            color: $main-text-cl;
             font-size: 1.4rem;
             line-height: 1.5;
             letter-spacing: 1.4px;
@@ -58,7 +58,7 @@
         }
 
         p {
-            color: #176b6a;
+            color: $green-cl;
             font-size: 1.4rem;
             line-height: 55px;
             font-weight: 400;
@@ -72,6 +72,11 @@
                 min-width: 40px;
                 height: 37px;
                 margin-right: 10px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
             }
 
             p {
