@@ -2,8 +2,86 @@
 footer
 ------------------------------------------------------------*/
 .c-footer {
-    padding: 20px;
-    background: #051a2b;
-    color: #fff;
     text-align: center;
+    padding-top: 90px;
+    padding-bottom: 60px;
+
+    &__container {
+        max-width: 1070px;
+        margin: auto;
+        padding: 0 30px;
+
+        @include sp {
+            padding: 0 15px;
+            max-width: 345px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @include sp {
+            flex-direction: column;
+        }
+    }
+
+    &__contact {
+        li {
+            p {
+                font-size: 1.4rem;
+                color: #282828;
+                text-align: left;
+                line-height: 24px;
+                letter-spacing: 1.4px;
+            }
+        }
+
+        @include sp {
+            width: 100%;
+
+            li {
+                p {
+                    font-size: 2.6rem;
+                    line-height: 1.7;
+                    letter-spacing: 0;
+                    color: $black-cl;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        text-align: right;
+
+        p {
+            color: #282828;
+            font-size: 1.2rem;
+            letter-spacing: 1.2px;
+            line-height: 24px;
+            margin-top: 10px;
+        }
+
+        @include sp {
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+
+            p {
+                font-size: 2rem;
+                line-height: 1;
+            }
+        }
+    }
+
+    &__img {
+        width: 145px;
+        height: 37px;
+
+        @include sp {
+            width: 100px;
+            height: 25px;
+        }
+    }
 }

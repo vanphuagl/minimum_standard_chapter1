@@ -1,0 +1,134 @@
+.p-banner {
+    padding-top: 105px;
+    padding-bottom: 16px;
+
+    @include sp {
+        padding-top: 40px;
+        padding-bottom: 8px;
+    }
+
+    &__container {
+        max-width: 1090px;
+        margin: auto;
+        padding: 0 30px;
+
+        @include sp {
+            max-width: 345px;
+            padding: 0 15px;
+        }
+    }
+
+    &__bg1 {
+        background-image: url("../../_public/assets/img/banner1.jpg");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 250px;
+        border-radius: 50px;
+        position: relative;
+        margin: auto;
+
+        @include sp {
+            background-image: url("../../_public/assets/img/banner1-sp.png");
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: #e1e7f5;
+            max-width: 250px;
+            height: 250px;
+            border-radius: 25px;
+        }
+    }
+
+    &__bg2 {
+        background-image: url("../../_public/assets/img/banner2.jpg");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 260px;
+        border-radius: 50px;
+        position: relative;
+
+        figure {
+            position: absolute;
+            background-color: transparent;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            img:first-child {
+                display: none;
+
+                @include sp {
+                    display: block;
+                }
+            }
+
+            img:last-child {
+                @include sp {
+                    display: none;
+                }
+            }
+        }
+
+        @include sp {
+            background-image: url("../../_public/assets/img/banner2-sp.png");
+            margin: auto;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            height: 250px;
+            max-width: 250px;
+            border-radius: 25px;
+
+            figure {
+                width: 205.5px;
+                max-width: 100%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+
+        span {
+            color: #333;
+            font-weight: 400;
+            font-size: 2rem;
+            font-family: "Hiragino Mincho Pro";
+            line-height: 1.4;
+            margin-right: 14px;
+        }
+
+        h2 {
+            color: #333;
+            font-weight: 400;
+            font-size: 4.5rem;
+            letter-spacing: 4.5px;
+            line-height: 1.1;
+        }
+
+        @include sp {
+            top: 0;
+            transform: translateY(42px);
+
+            span {
+                font-size: 2.8rem;
+                line-height: 30px;
+                letter-spacing: 1.4px;
+                margin-right: 0;
+            }
+
+            h2 {
+                font-size: 4rem;
+                line-height: 1.5;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

@@ -1,37 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      <%= (typeof title != "undefined" ? title : "Page title") %>
-    </title>
 
-    {{ meta }}
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= (typeof title != "undefined" ? title : "Page title") %>
+  </title>
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
-      rel="stylesheet"
-    >
+  {{ meta }}
 
-    {{ style }}
-    <script type="module" src="/_scss/style.js"></script>
-    {{ head }}
-  </head>
-  <body>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
 
+
+  {{ style }}
+  <script type="module" src="/_scss/style.js"></script>
+  {{ head }}
+</head>
+
+<body>
+  <div class="l-wrapper">
     <%- include('_partials/header'); -%>
 
     {{ content }}
 
     <%- include('_partials/footer'); -%>
+  </div>
+  {{ script }}
+  <script src="/assets/js/main.js"></script>
+</body>
 
-    {{ script }}
-    <script src="/assets/js/main.js"></script>
-  </body>
 </html>
