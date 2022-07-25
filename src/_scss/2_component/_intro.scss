@@ -17,8 +17,9 @@
   }
 
   &__content {
-    margin-top: 35px;
-    padding-bottom: 31px;
+    margin-top: 33px;
+    padding-bottom: 32.5px;
+    margin-left: 8px;
     border-bottom: 1px solid $green-cl;
 
     @include sp {
@@ -51,7 +52,7 @@
   &__info {
     position: relative;
     margin-top: 20px;
-    padding-right: 43px;
+    padding-right: 32px;
     color: $main-text-cl;
     font-size: 1.4rem;
     line-height: 1.5;
@@ -60,9 +61,9 @@
 
     figure {
       position: absolute;
-      right: 0;
+      right: -8px;
       top: 0;
-      transform: translateY(-85%);
+      transform: translateY(-88%);
 
       img {
         transform: translateX(0);
