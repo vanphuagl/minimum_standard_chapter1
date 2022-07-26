@@ -22,7 +22,7 @@ Css of home page
         }
 
         &__wrapper {
-            background-image: url("../../_public/assets/img/bg_main.png");
+            background-image: url("../../assets/img/bg_main.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -33,7 +33,7 @@ Css of home page
             margin-right: -10px;
 
             @include sp {
-                background-image: url("../../_public/assets/img/bg-main-sm.png");
+                background-image: url("../../assets/img/bg-main-sm.png");
                 height: 521.5px;
                 border-radius: 25px;
                 background-position: bottom;

@@ -19,7 +19,7 @@
     }
 
     &__bg1 {
-        background-image: url("../../_public/assets/img/banner1.jpg");
+        background-image: url("../../assets/img/banner1.jpg");
         background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
@@ -29,7 +29,7 @@
         margin: auto;
 
         @include sp {
-            background-image: url("../../_public/assets/img/banner1-sp.png");
+            background-image: url("../../assets/img/banner1-sp.png");
             background-position: bottom;
             background-size: contain;
             background-repeat: no-repeat;
@@ -41,7 +41,7 @@
     }
 
     &__bg2 {
-        background-image: url("../../_public/assets/img/banner2.jpg");
+        background-image: url("../../assets/img/banner2.jpg");
         background-position: right;
         background-repeat: no-repeat;
         background-size: cover;
@@ -76,7 +76,7 @@
         }
 
         @include sp {
-            background-image: url("../../_public/assets/img/banner2-sp.png");
+            background-image: url("../../assets/img/banner2-sp.png");
             margin: auto;
             background-repeat: no-repeat;
             background-position: bottom;

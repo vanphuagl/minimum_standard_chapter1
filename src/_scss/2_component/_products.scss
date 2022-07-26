@@ -1,5 +1,5 @@
 .p-product {
-    background-image: url("../../_public/assets/img/bgPoint.jpg");
+    background-image: url("../../assets/img/bgPoint.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -237,7 +237,7 @@
 
     @for $i from 1 through 9 {
         &__item#{$i} {
-            background-image: url("../../_public/assets/img/product/item#{$i}.png");
+            background-image: url("../../assets/img/product/item#{$i}.png");
         }
     }
 

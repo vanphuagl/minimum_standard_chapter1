@@ -52,10 +52,10 @@ a {
 //-------------------------------------------------------
 .l-wrapper {
     border: 30px solid transparent;
-    border-image: url("../../_public/assets/img/bg-header.jpg") 30 round;
+    border-image: url("../../assets/img/bg-header.jpg") 30 round;
 
     @include sp {
         border: 15px solid transparent;
-        border-image: url("../../_public/assets/img/bg-header.jpg") 15 round;
+        border-image: url("../../assets/img/bg-header.jpg") 15 round;
     }
 }
