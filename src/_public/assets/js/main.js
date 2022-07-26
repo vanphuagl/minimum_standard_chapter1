@@ -18,7 +18,7 @@ window.addEventListener("resize", function () {
 const navLink = document.querySelectorAll(".c-header__link");
 function linkAction() {
   // When we click on each link, we remove the is-showmenu class
-  // navToggle.classList.toggle("is-active");
+  navToggle.classList.toggle("is-active");
   navMenu.classList.toggle("is-showmenu");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
@@ -147,7 +147,7 @@ let qa_list = document.querySelector("#qa-list");
 const renderQA = (qa) => {
   qa.forEach((e) => {
     let qal = `
-          <dl class="p-qa__content">
+          <dl class="p-qa__content p-item${e.id}">
             <dt class="p-qa__title">
               <figure>
                 <img src="./assets/img/qa/qa_icon.png" alt="qa-icon">
