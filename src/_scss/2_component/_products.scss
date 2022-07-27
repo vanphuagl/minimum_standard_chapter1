@@ -241,17 +241,6 @@
         }
     }
 
-    &__item2,
-    &__item3,
-    &__item5,
-    &__item6,
-    &__item8,
-    &__item9 {
-        @include sp {
-            display: none;
-        }
-    }
-
     &__info {
         position: absolute;
         top: 20px;

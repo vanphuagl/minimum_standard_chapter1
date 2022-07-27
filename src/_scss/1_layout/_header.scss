@@ -1,6 +1,7 @@
 /* Header
 ------------------------------------------------------------*/
 .c-header {
+
     /* -------------------------------- ICON MENU ------------------------------- */
     &__menu {
         display: none;
@@ -28,17 +29,13 @@
                     &::before {
                         top: -5px;
                         background-color: #1f4242;
-                        @include transform(
-                            rotateZ(45deg) scaleX(1.25) translate(1.5px, 3px)
-                        );
+                        @include transform(rotateZ(45deg) scaleX(1.25) translate(1.5px, 3px));
                     }
 
                     &::after {
                         top: 8px;
                         background-color: #1f4242;
-                        @include transform(
-                            rotateZ(-45deg) scaleX(1.25) translate(5px, -7px)
-                        );
+                        @include transform(rotateZ(-45deg) scaleX(1.25) translate(5px, -7px));
                     }
                 }
             }
@@ -129,14 +126,17 @@
                 left: 0;
 
                 li {
-                    width: 80%;
+                    width: 90%;
                     border-bottom: 1px solid #3a5656;
                     text-align: center;
-                    margin-bottom: 25px;
+                    font-size: 4rem;
+                    line-height: 4;
+                    height: 70px;
 
                     a {
                         width: 100%;
                         padding-left: 0;
+                        margin-top: -10px;
                     }
                 }
             }
@@ -187,18 +187,27 @@
         }
     }
 
-    &__menu.is-active ~ &__leaf1 {
+    &__menu.is-active~&__leaf1 {
         @include sp {
-            opacity: 0.5;
-            transform: translateX(-90px) !important;
+            transform: rotate(-105deg) !important;
+            top: -60px;
+            left: -80px;
+            width: 232px;
+            height: 193px;
+            opacity: 0.2;
             mix-blend-mode: unset;
         }
     }
 
-    &__menu.is-active ~ &__leaf2 {
+    &__menu.is-active~&__leaf2 {
         @include sp {
-            opacity: 0.5;
-            transform: translateX(0) !important;
+            transform: rotate(-27deg) !important;
+            top: 440px;
+            right: -70px;
+            bottom: unset;
+            width: 263px;
+            height: 182px;
+            opacity: 0.2;
             mix-blend-mode: unset;
         }
     }
