@@ -89,17 +89,25 @@ const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
   const scrollY = window.pageYOffset;
+  console.log("scrollY", scrollY);
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight,
-    sectionTop = current.offsetTop - 50,
-    sectionId = current.getAttribute("id");
+      sectionTop = current.offsetTop - 50,
+      sectionId = current.getAttribute("id");
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
         .querySelector(".c-header__nav a[href*=" + sectionId + "]")
         .classList.add("active-link");
-     } else {
+    } else if (scrollY === 7184) {
+      document
+        .querySelector(".c-header__nav a[href*=" + "video" + "]")
+        .classList.add("active-link");
+      document
+        .querySelector(".c-header__nav a[href*=" + "intro" + "]")
+        .classList.remove("active-link");
+    } else {
       document
         .querySelector(".c-header__nav a[href*=" + sectionId + "]")
         .classList.remove("active-link");
