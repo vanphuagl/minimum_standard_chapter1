@@ -1,6 +1,7 @@
 let $ = document.querySelector.bind(document);
 let $$ = document.querySelectorAll.bind(document);
-
+let header = $(".c-header");
+let menuMobile = $("#menuMobile");
 let introContents = $$(".p-intro__content > a");
 let showInfos = $$(".p-intro__showInfo");
 let pointList1 = $$(".p-point__list1 > .p-point__wrapItem");
@@ -17,6 +18,26 @@ let pointList3Btn = $$(
   ".p-point__list3 > .p-point__wrapItem > .p-point__Item > .p-point__btnMore"
 );
 
+window.onscroll = function () {
+  handleScrollTopHeader();
+};
+
+function handleScrollTopHeader() {
+  let scrollTopHeader =
+    window.pageYOffset ||
+    document.documentElement.scrollTop ||
+    document.body.scrollTop ||
+    0;
+  if (scrollTopHeader > 50) {
+    header.classList.add("is-active");
+  } else {
+    header.classList.remove("is-active");
+  }
+}
+
+menuMobile.onclick = function () {
+  menuMobile.classList.toggle("is-active");
+};
 
 for (let i = 0; i < showInfos.length; i++) {
   showInfos[i].onclick = function () {
@@ -57,69 +78,32 @@ for (let i = 0; i < pointList1.length; i++) {
   };
 }
 
-/*===== MENU SHOW/HIDDEN =====*/
-const navMenu = document.getElementById("nav-menu"),
-    navToggle = document.querySelector(".c-header__menu");
-
-navToggle.addEventListener("click", () => {
-    navToggle.classList.toggle("is-active");
-    navMenu.classList.toggle("is-showmenu");
-});
-
-window.addEventListener("resize", function () {
-    if (window.innerWidth < 768) {
-        navMenu.classList.remove("is-showmenu");
-        navToggle.classList.remove("is-active");
-    }
-});
-
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll(".c-header__link");
-function linkAction() {
-    // When we click on each link, we remove the is-showmenu class
-    navToggle.classList.toggle("is-active");
-    navMenu.classList.toggle("is-showmenu");
-}
-navLink.forEach((n) => n.addEventListener("click", linkAction));
-
-/*=============== SCROLL TOP HEADER ===============*/
-const header = document.querySelector(".c-header");
-function handleScrollTopHeader() {
-    let scrollTopHeader =
-    window.pageYOffset ||
-    document.documentElement.scrollTop ||
-    document.body.scrollTop ||
-    0;
-    if (scrollTopHeader > 50) {
-        header.classList.add("is-animate");
-    } else {
-        header.classList.remove("is-animate");
-    }
+for (let i = 0; i < navBarList.length; i++) {
+  navBarList[i].onclick = function () {
+    menuMobile.classList.remove("is-active");
+  };
 }
 
-window.onscroll = function () {
-    handleScrollTopHeader();
-};
-
-/*=============== SCROLL ACTIVE LINK ===============*/
+//
 const sections = document.querySelectorAll("section[id]");
+
 function scrollActive() {
-    const scrollY = window.pageYOffset;
+  const scrollY = window.pageYOffset;
 
-    sections.forEach((current) => {
-        const sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop - 50,
-            sectionId = current.getAttribute("id");
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+    sectionTop = current.offsetTop - 50,
+    sectionId = current.getAttribute("id");
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document
-                .querySelector(".c-header__nav a[href*=" + sectionId + "]")
-                .classList.add("is-active");
-        } else {
-            document
-                .querySelector(".c-header__nav a[href*=" + sectionId + "]")
-                .classList.remove("is-active");
-        }
-    });
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".c-header__nav a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+     } else {
+      document
+        .querySelector(".c-header__nav a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
 }
 window.addEventListener("scroll", scrollActive);

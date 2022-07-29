@@ -10,6 +10,8 @@
   <meta name="description" content="Mentha Oil" />
   <meta name="keywords" content="Html, Css, Javascript" />
 
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,12 +27,13 @@
     <!-- ------------------------------- HEADER -------------------------------- -->
     <header class="c-header">
       <div class="c-header__container">
-        <div class="c-header__menu">
-          <span></span>
-        </div>
-        <nav class="c-header__nav" id="nav-menu">
+        <figure class="c-header__menuMobile" id="menuMobile">
+          <img src="./assets/images/iconmenu_turnon.png" alt="iconmenu_turnon" />
+          <img src="./assets/images/iconmenu_turnoff.png" alt="iconmenu_turnoff" />
+        </figure>
+        <nav class="c-header__nav">
           <ul>
-            <li><a href="#home" class="c-header__link">トップ</a></li>
+            <li><a href="#home" class="c-header__link active-link">トップ</a></li>
             <li><a href="#products" class="c-header__link">毎日にハッカ油</a></li>
             <li><a href="#point" class="c-header__link">製品情報</a></li>
             <li><a href="#qa" class="c-header__link">Q&A</a></li>
@@ -38,35 +41,34 @@
             <li><a href="#video" class="c-header__link">ハッカ油ムービー</a></li>
           </ul>
         </nav>
-        <figure class="c-header__leaf1 c-leaf1">
-          <img src="./assets/images/leaf1.png" alt="leaf1">
+        <figure class="c-header__leaf1">
+          <img src="./assets/images/leaf1.png" alt="leaf1" />
         </figure>
-        <figure class="c-header__leaf2 c-leaf2">
-          <img src="./assets/images/leaf2.png" alt="leaf2">
+        <figure class="c-header__leaf2">
+          <img src="./assets/images/leaf2.png" alt="leaf2" />
         </figure>
-        <figure class="c-header__drop1 c-drop1">
-          <img src="./assets/images/drop1.png" alt="drop1">
+        <figure class="c-header__drop1">
+          <img src="./assets/images/drop1.png" alt="drop1" />
         </figure>
-        <figure class="c-header__drop2 c-drop2">
-          <img src="./assets/images/drop2.png" alt="drop2">
+        <figure class="c-header__drop2">
+          <img src="./assets/images/drop2.png" alt="drop2" />
         </figure>
-        <figure class="c-header__drop3 c-drop3">
-          <img src="./assets/images/drop3.png" alt="drop3">
+        <figure class="c-header__drop3">
+          <img src="./assets/images/drop3.png" alt="drop3" />
         </figure>
-        <figure class="c-header__drop4 c-drop4">
-          <img src="./assets/images/drop4.png" alt="drop4">
+        <figure class="c-header__drop4">
+          <img src="./assets/images/drop4.png" alt="drop4" />
         </figure>
-        <figure class="c-header__drop5 c-drop5">
-          <img src="./assets/images/drop5.png" alt="drop5">
+        <figure class="c-header__drop5">
+          <img src="./assets/images/drop5.png" alt="drop5" />
         </figure>
-        <figure class="c-header__drop6 c-drop6">
-          <img src="./assets/images/drop6.png" alt="drop6">
+        <figure class="c-header__drop6">
+          <img src="./assets/images/drop6.png" alt="drop6" />
         </figure>
       </div>
     </header>
     <!-- ----------------------------- END HEADER ------------------------------ -->
 
-    <!-- -------------------------------- MAIN --------------------------------- -->
     <main class="l-main">
       <!-- -------------------------------- HERO --------------------------------- -->
       <section class="p-hero" id="home">
@@ -77,7 +79,7 @@
                 <img src="./assets/images/texts/headerTitle.png" alt="textTitle" />
                 <img class="p-hero__content--sm" src="./assets/images/texts/headerTitle-sm.png" alt="textTitle-sm" />
               </figure>
-              <h4>MENTHA OIL</h4>
+              <h1>MENTHA OIL</h1>
               <div class="p-hero__info">
                 <span>ハッカ油は、毎日の暮らしを豊かにする</span>
                 <p>魔法のしずく</p>
@@ -91,7 +93,7 @@
       </section>
       <!-- ------------------------------ END HERO ------------------------------- -->
 
-      <!-- ------------------------------- PRODUCTS ------------------------------- -->
+      <!-- ----------------------------- END PRODUCT ----------------------------- -->
       <section class="p-products" id="products">
         <div class="p-products__container">
           <div class="p-products__wrapper">
@@ -156,7 +158,8 @@
                 <div class="p-products__wrapItem">
                   <a href="#" class="p-products__Item2">
                     <figure class="p-products__label">
-                      <img src="./assets/images/prods/recom-label.png" alt="recomLabel" />
+                      <img class="p-products__img-lg" src="./assets/images/prods/recom-label.png" alt="recomLabel" />
+                      <img class="p-products__img-sm" src="./assets/images/prods/recomment-sm.png" alt="recom-sm" />
                     </figure>
                     <figure class="p-products__image">
                       <img src="./assets/images/prods/list2-Item2.png" alt="list2Item2" />
@@ -185,7 +188,7 @@
           </div>
         </div>
       </section>
-      <!-- ---------------------------- END PRODUCTS ----------------------------- -->
+      <!-- ------------------------------- PRODUCT ------------------------------- -->
 
       <!-- -------------------------------- POINT -------------------------------- -->
       <section class="p-point" id="point">
@@ -282,12 +285,12 @@
                 <div class="p-point__title">
                   <h2>気持ちリフレッシュ</h2>
                   <p>メントールの刺激ですっきりクールダウン。</p>
-                  <p>ミントの香りで気分も爽快！</p>
+                  <p>ミントの香りで気分も爽快!</p>
                 </div>
               </div>
               <div class="p-point__title p-point__title--sp">
                 <p>メントールの刺激ですっきりクールダウン。</p>
-                <p>ミントの香りで気分も爽快！</p>
+                <p>ミントの香りで気分も爽快!</p>
               </div>
               <div class="p-point__list p-point__list2">
                 <div class="p-point__wrapItem">
@@ -431,10 +434,10 @@
               </div>
             </div>
             <div class="p-point__partner">
-              <h2>お買い求めは全国のドラッグストア 、またはこちらから</h2>
+              <h2>お買い求めは全国のドラッグストア、またはこちらから</h2>
               <div class="p-point__partnerList">
                 <div class="p-point__partnerWrap">
-                  <a href="#" class="p-point__partnerItem">
+                  <a href="#" class="p-point__partnerItem" target="_blank">
                     <figure class="p-point__partnerLogo">
                       <img src="./assets/images/point/partner1.png" alt="partner1" />
                     </figure>
@@ -444,7 +447,7 @@
                   </a>
                 </div>
                 <div class="p-point__partnerWrap">
-                  <a href="#" class="p-point__partnerItem">
+                  <a href="#" class="p-point__partnerItem" target="_blank">
                     <figure class="p-point__partnerLogo">
                       <img src="./assets/images/point/partner2.png" alt="partner2" />
                     </figure>
@@ -454,7 +457,7 @@
                   </a>
                 </div>
                 <div class="p-point__partnerWrap">
-                  <a href="#" class="p-point__partnerItem">
+                  <a href="#" class="p-point__partnerItem" target="_blank">
                     <figure class="p-point__partnerLogo">
                       <img src="./assets/images/point/partner3.png" alt="partner3" />
                     </figure>
@@ -464,7 +467,7 @@
                   </a>
                 </div>
                 <div class="p-point__partnerWrap">
-                  <a href="#" class="p-point__partnerItem">
+                  <a href="#" class="p-point__partnerItem" target="_blank">
                     <figure class="p-point__partnerLogo">
                       <img src="./assets/images/point/partner4.png" alt="partner4" />
                     </figure>
@@ -482,7 +485,7 @@
           </div>
         </div>
       </section>
-      <!-- ------------------------------ END POINT ------------------------------ -->
+      <!-- -------------------------------- END POINT -------------------------------- -->
 
       <!-- --------------------------------- QA ---------------------------------- -->
       <section class="p-qa" id="qa">
@@ -494,7 +497,7 @@
                 <figure>
                   <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                 </figure>
-                <p>虫除け対策に直接体や環境に噴きかけても良いですか？</p>
+                <p>虫除け対策に直接体や環境に噴きかけても良いですか?</p>
               </dt>
               <dd>
                 刺激が強過ぎる可能性がありますので、薄めて使用してください。また素材によっては変質(変色)するおそれがありますので注意してください。
@@ -505,7 +508,7 @@
                 <figure>
                   <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                 </figure>
-                <p>体に使用する際の注意点は？</p>
+                <p>体に使用する際の注意点は?</p>
               </dt>
               <dd>
                 刺激作用があるため、目や目の周囲、粘膜等に付着しないように注意してください。
@@ -517,7 +520,7 @@
                   <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                 </figure>
                 <p>
-                  ハッカ油アイテムを作る際に使用する量は紹介されている量を守らないといけませんか？
+                  ハッカ油アイテムを作る際に使用する量は紹介されている量を守らないといけませんか?
                 </p>
               </dt>
               <dd>
@@ -529,7 +532,7 @@
                 <figure>
                   <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                 </figure>
-                <p>使用期限はどのくらいですか？</p>
+                <p>使用期限はどのくらいですか?</p>
               </dt>
               <dd>
                 パッケージ裏面に賞味期限を記載しています。遮光して、涼しい所に保管してください。
@@ -540,7 +543,7 @@
                 <figure>
                   <img src="./assets/images/Q&A/qa_icon.png" alt="qa_icon" />
                 </figure>
-                <p>ハッカ油は何からできたものですか？</p>
+                <p>ハッカ油は何からできたものですか?</p>
               </dt>
               <dd>
                 ハッカ油とはハッカソウというミントを乾燥させて抽出した植物油のことです。
@@ -551,8 +554,8 @@
       </section>
       <!-- ------------------------------- END QA -------------------------------- -->
 
-      <!-- ------------------------------ BANNER 1 ------------------------------- -->
-      <div class="p-banner" id="banner1">
+      <!-- ------------------------------- BANNER -------------------------------- -->
+      <div class="p-banner">
         <div class="p-banner__container">
           <a href="#" class="p-banner__bg1">
             <div class="p-banner__content">
@@ -562,7 +565,7 @@
           </a>
         </div>
       </div>
-      <!-- ---------------------------- END BANNER 1 ----------------------------- -->
+      <!-- ------------------------------- END BANNER -------------------------------- -->
 
       <!-- -------------------------------- INTRO -------------------------------- -->
       <section class="p-intro" id="intro">
@@ -572,7 +575,7 @@
               <a href="#" class="is-show">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image11">
-                    <img src="./assets/images/intro/intro_11.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_11.png" alt="風邪をひきやすい冬も安心" />
                   </figure>
                   <div class="p-intro__title">
                     <span>風邪をひきやすい冬も安心</span>
@@ -600,7 +603,7 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image10">
-                    <img src="./assets/images/intro/intro_10.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_10.png" alt="万能だからこそ知っておこう" />
                   </figure>
                   <div class="p-intro__title">
                     <span>万能だからこそ知っておこう</span>
@@ -628,7 +631,7 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image9">
-                    <img src="./assets/images/intro/intro_9.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_9.png" alt="涼しいオアシスタイム" />
                   </figure>
                   <div class="p-intro__title">
                     <span>涼しいオアシスタイム</span>
@@ -656,7 +659,7 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image8">
-                    <img src="./assets/images/intro/intro_8.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_8.png" alt="気分転換の強い味方" />
                   </figure>
                   <div class="p-intro__title">
                     <span>気分転換の強い味方</span>
@@ -684,11 +687,11 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image7">
-                    <img src="./assets/images/intro/intro_7.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_7.png" alt="嫌な匂いはサヨウナラ、ブーツや靴などに" />
                   </figure>
                   <div class="p-intro__title">
                     <span>嫌な匂いはサヨウナラ、ブーツや靴などに</span>
-                    <h2>ハッカ油の消臭マジック！</h2>
+                    <h2>ハッカ油の消臭マジック!</h2>
                   </div>
                 </div>
                 <div class="p-intro__info">
@@ -712,11 +715,11 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image6">
-                    <img src="./assets/images/intro/intro_6.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_6.png" alt="香りと抗菌のダブルパワー" />
                   </figure>
                   <div class="p-intro__title">
                     <span>香りと抗菌のダブルパワー</span>
-                    <h2>衣類がハッカ油でよみがえる！？</h2>
+                    <h2>衣類がハッカ油でよみがえる! ?</h2>
                   </div>
                 </div>
                 <div class="p-intro__info">
@@ -740,7 +743,7 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image5">
-                    <img src="./assets/images/intro/intro_5.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_5.png" alt="いつでもどこでもサッと使える" />
                   </figure>
                   <div class="p-intro__title">
                     <span>いつでもどこでもサッと使える</span>
@@ -768,7 +771,7 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image4">
-                    <img src="./assets/images/intro/intro_4.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_4.png" alt="使わないなんてもったいない" />
                   </figure>
                   <div class="p-intro__title">
                     <span>使わないなんてもったいない</span>
@@ -776,7 +779,7 @@
                   </div>
                 </div>
                 <div class="p-intro__info">
-                  自然素材を使って掃除したい人にもハッカ油はおすすめ。除菌・防カビ・消臭効果が期待でき、掃除や食器の手入れにも使えます。炭酸水や重曹に数滴混ぜるだけの簡単クリーナーで、家中ピカピカに磨き上げましょう！
+                  自然素材を使って掃除したい人にもハッカ油はおすすめ。除菌・防カビ・消臭効果が期待でき、掃除や食器の手入れにも使えます。炭酸水や重曹に数滴混ぜるだけの簡単クリーナーで、家中ピカピカに磨き上げましょう!
                   合成洗剤のように手荒れの心配もなく、何より、さわやかな香りが心地良いため面倒な掃除も頑張れそうです。
                   <figure>
                     <img src="./assets/images/intro/intro_arrow.gif" alt="arrow" />
@@ -797,7 +800,7 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image3">
-                    <img src="./assets/images/intro/intro_3.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_3.png" alt="おうちでサロン気分" />
                   </figure>
                   <div class="p-intro__title">
                     <span>おうちでサロン気分</span>
@@ -805,7 +808,7 @@
                   </div>
                 </div>
                 <div class="p-intro__info">
-                  バスタイムを満喫できるさまざまな入浴剤やバスソルトが市販されていますが、実はハッカ油を入浴剤として使ってもOK。湯上りがさっぱりとして、気分爽快！
+                  バスタイムを満喫できるさまざまな入浴剤やバスソルトが市販されていますが、実はハッカ油を入浴剤として使ってもOK。湯上りがさっぱりとして、気分爽快!
                   またシャンプーやボディーソープに混ぜて使えば、汗でべたべたする頭皮や肌をすっきり引き締めてくれます。ジメジメする梅雨時期や、汗をかく夏場の入浴には特におすすめです。
                   <figure>
                     <img src="./assets/images/intro/intro_arrow.gif" alt="arrow" />
@@ -826,11 +829,11 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image2">
-                    <img src="./assets/images/intro/intro_2.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_2.png" alt="マスクにシュッシュと一噴き" />
                   </figure>
                   <div class="p-intro__title">
                     <span>マスクにシュッシュと一噴き</span>
-                    <h2>ハッカ油で上手に生活管理！</h2>
+                    <h2>ハッカ油で上手に生活管理!</h2>
                   </div>
                 </div>
                 <div class="p-intro__info">
@@ -854,11 +857,11 @@
               <a href="#">
                 <div class="p-intro__heading">
                   <figure class="p-intro__image1">
-                    <img src="./assets/images/intro/intro_1.png" alt="intro_image" />
+                    <img src="./assets/images/intro/intro_1.png" alt="害虫も怖くない" />
                   </figure>
                   <div class="p-intro__title">
                     <span>害虫も怖くない</span>
-                    <h2>さわやかハッカ油で虫除け対策！</h2>
+                    <h2>さわやかハッカ油で虫除け対策!</h2>
                   </div>
                 </div>
                 <div class="p-intro__info">
@@ -881,10 +884,10 @@
           </div>
         </div>
       </section>
-      <!-- ------------------------------ END INTRO ------------------------------ -->
+      <!-- -------------------------------- END INTRO -------------------------------- -->
 
-      <!-- ------------------------------ BANNER 2 ------------------------------- -->
-      <div class="p-banner" id="video">
+      <!-- ------------------------------ END VIDEO ------------------------------ -->
+      <section class="p-banner" id="video">
         <div class="p-banner__container">
           <a href="#" class="p-banner__bg2">
             <figure>
@@ -892,11 +895,11 @@
               <img src="./assets/images/iconhome-sp.png" alt="iconHome-sp" />
             </figure>
           </a>
+
         </div>
-      </div>
-      <!-- ---------------------------- END BANNER 2 ----------------------------- -->
+      </section>
+      <!-- -------------------------------- VIDEO -------------------------------- -->
     </main>
-    <!-- ------------------------------ END MAIN ------------------------------- -->
 
     <!-- ------------------------------- FOOTER -------------------------------- -->
     <footer class="l-footer">
@@ -912,7 +915,7 @@
             <li>
               <p>
                 TEL |
-                06-6231-5626&emsp;受付時間&ensp;|&ensp;8:45〜17:30(土日祝日を除く)
+                <a href="tel:+0662315626">06-6231-5626</a>&emsp;受付時間 | 8:45〜17:30(土日祝日を除く)
               </p>
             </li>
           </ul>
@@ -928,8 +931,6 @@
       </div>
     </footer>
     <!-- ----------------------------- END FOOTER ------------------------------ -->
-
-    <!-- script -->
     <script src="./assets/scripts/app.js"></script>
   </div>
 </body>
