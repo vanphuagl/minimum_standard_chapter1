@@ -100,7 +100,7 @@ function scrollActive() {
       document
         .querySelector(".c-header__nav a[href*=" + sectionId + "]")
         .classList.add("active-link");
-    } else if (scrollY === 7184) {
+    } else if (scrollY >= 6820) {
       document
         .querySelector(".c-header__nav a[href*=" + "video" + "]")
         .classList.add("active-link");
