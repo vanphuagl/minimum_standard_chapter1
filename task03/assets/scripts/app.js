@@ -1,7 +1,7 @@
-let $ = document.querySelector.bind(document);
+// let $ = document.querySelector.bind(document);
 let $$ = document.querySelectorAll.bind(document);
-let header = $(".c-header");
-let menuMobile = $("#menuMobile");
+let header = document.querySelector(".c-header");
+let menuMobile = document.querySelector("#menuMobile");
 let introContents = $$(".p-intro__content > a");
 let showInfos = $$(".p-intro__showInfo");
 let pointList1 = $$(".p-point__list1 > .p-point__wrapItem");
@@ -17,6 +17,7 @@ let pointList2Btn = $$(
 let pointList3Btn = $$(
   ".p-point__list3 > .p-point__wrapItem > .p-point__Item > .p-point__btnMore"
 );
+let bodyPage = document.querySelector('body');
 
 window.onscroll = function () {
   handleScrollTopHeader();
@@ -37,13 +38,22 @@ function handleScrollTopHeader() {
 
 menuMobile.onclick = function () {
   menuMobile.classList.toggle("is-active");
+  bodyPage.classList.toggle("hidden-scroll");
 };
+
+for (let i = 0; i < navBarList.length; i++) {
+  navBarList[i].onclick = function () {
+    menuMobile.classList.remove("is-active");
+  };
+}
 
 for (let i = 0; i < showInfos.length; i++) {
   showInfos[i].onclick = function () {
     introContents[i].classList.toggle("is-show");
   };
 }
+
+//
 
 let clearPointList1 = function () {
   for (let i = 0; i < pointList1.length; i++) {
@@ -61,28 +71,47 @@ let clearPointList3 = function () {
   }
 };
 
-for (let i = 0; i < pointList1.length; i++) {
-  pointList1Btn[i].onclick = function () {
+const pointArr = [0, 1, 2];
+pointArr.forEach(function (e) {
+  pointList1Btn[e].onclick = function () {
+    // console.log("e", e);
     clearPointList1();
-    pointList1[i].classList.add("active");
+    pointList1[e].classList.add("active");
   };
 
-  pointList2Btn[i].onclick = function () {
+  pointList2Btn[e].onclick = function () {
     clearPointList2();
-    pointList2[i].classList.add("active");
+    pointList2[e].classList.add("active");
   };
-
-  pointList3Btn[i].onclick = function () {
+  pointList3Btn[e].onclick = function () {
     clearPointList3();
-    pointList3[i].classList.add("active");
+    pointList3[e].classList.add("active");
   };
-}
+});
 
-for (let i = 0; i < navBarList.length; i++) {
-  navBarList[i].onclick = function () {
-    menuMobile.classList.remove("is-active");
-  };
-}
+// for (let i = 0; i < pointList1.length; i++) {
+//   pointList1Btn[e].onclick = function () {
+//     // console.log("e", e);
+//     clearPointList1();
+//     pointList1[e].classList.add("active");
+//   };
+
+//   pointList2Btn[e].onclick = function () {
+//     clearPointList2();
+//     pointList2[e].classList.add("active");
+//   };
+//   pointList3Btn[e].onclick = function () {
+//     clearPointList3();
+//     pointList3[i].classList.add("active");
+//   };
+// }
+
+// $('.p-point__btnMore').click(function() {
+//   var itemCurrent = $(this).parent('.p-point__Item');
+//   console.log('itemCurrent', itemCurrent);
+//   itemCurrent.find('.p-point__info').fadeIn();
+//   itemCurrent.siblings('.p-point__Item').find('.p-point__info').fadeOut();
+// });
 
 //
 const sections = document.querySelectorAll("section[id]");
@@ -91,16 +120,17 @@ function scrollActive() {
   const scrollY = window.pageYOffset;
   console.log("scrollY", scrollY);
 
-  sections.forEach((current) => {
+  Array.prototype.slice.call(sections).forEach(function (current) {
     const sectionHeight = current.offsetHeight,
       sectionTop = current.offsetTop - 50,
       sectionId = current.getAttribute("id");
+      console.log('sectionId', sectionId)
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
         .querySelector(".c-header__nav a[href*=" + sectionId + "]")
         .classList.add("active-link");
-    } else if (scrollY >= 6820) {
+    } else if (scrollY >= 6822) {
       document
         .querySelector(".c-header__nav a[href*=" + "video" + "]")
         .classList.add("active-link");
@@ -115,3 +145,25 @@ function scrollActive() {
   });
 }
 window.addEventListener("scroll", scrollActive);
+
+//
+let isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+if (isIE11) {
+  $(document).ready(function () {
+    $(".c-header__link").on("click", function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        let hash = this.hash;
+        $("html,body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          1200,
+          function () {
+            window.location.hash = hash;
+          }
+        );
+      }
+    });
+  });
+}

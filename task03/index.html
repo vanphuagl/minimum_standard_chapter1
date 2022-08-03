@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentha Oil</title>
 
@@ -24,7 +24,7 @@
 
 <body>
   <div class="l-wrapper">
-    <!-- ------------------------------- HEADER -------------------------------- -->
+    <!-- HEADER -->
     <header class="c-header">
       <div class="c-header__container">
         <figure class="c-header__menuMobile" id="menuMobile">
@@ -67,10 +67,10 @@
         </figure>
       </div>
     </header>
-    <!-- ----------------------------- END HEADER ------------------------------ -->
+    <!-- END HEADER -->
 
     <main class="l-main">
-      <!-- -------------------------------- HERO --------------------------------- -->
+      <!-- HERO -->
       <section class="p-hero" id="home">
         <div class="p-hero__container">
           <div class="p-hero__wrapper">
@@ -91,9 +91,9 @@
           </div>
         </div>
       </section>
-      <!-- ------------------------------ END HERO ------------------------------- -->
+      <!-- END HERO -->
 
-      <!-- ----------------------------- END PRODUCT ----------------------------- -->
+      <!-- END PRODUCT -->
       <section class="p-products" id="products">
         <div class="p-products__container">
           <div class="p-products__wrapper">
@@ -188,9 +188,9 @@
           </div>
         </div>
       </section>
-      <!-- ------------------------------- PRODUCT ------------------------------- -->
+      <!-- PRODUCT -->
 
-      <!-- -------------------------------- POINT -------------------------------- -->
+      <!-- POINT -->
       <section class="p-point" id="point">
         <div class="p-point__container">
           <div class="p-point__wrapper">
@@ -220,7 +220,7 @@
                     <div class="p-point__info">
                       <h3>部屋干しも安心</h3>
                       <p>
-                        湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍&ensp;優しい自然な香りですっきりさわやか。
+                        湿気の多い梅雨の季節の部屋干しにはハッカ油が大活躍&ensp; 優しい自然な香りですっきりさわやか。
                       </p>
                       <div class="p-point__label">
                         <figure>
@@ -434,7 +434,7 @@
               </div>
             </div>
             <div class="p-point__partner">
-              <h2>お買い求めは全国のドラッグストア、またはこちらから</h2>
+              <h2>お買い求めは全国のドラッグストア<span>、またはこちらから</span></h2>
               <div class="p-point__partnerList">
                 <div class="p-point__partnerWrap">
                   <a href="#" class="p-point__partnerItem" target="_blank">
@@ -485,9 +485,9 @@
           </div>
         </div>
       </section>
-      <!-- -------------------------------- END POINT -------------------------------- -->
+      <!-- END POINT -->
 
-      <!-- --------------------------------- QA ---------------------------------- -->
+      <!-- QA -->
       <section class="p-qa" id="qa">
         <div class="p-qa__container">
           <div class="p-qa__wrapper">
@@ -552,10 +552,10 @@
           </div>
         </div>
       </section>
-      <!-- ------------------------------- END QA -------------------------------- -->
+      <!-- END QA -->
 
-      <!-- ------------------------------- BANNER -------------------------------- -->
-      <div class="p-banner">
+      <!-- BANNER -->
+      <section class="p-banner">
         <div class="p-banner__container">
           <a href="#" class="p-banner__bg1">
             <div class="p-banner__content">
@@ -564,10 +564,10 @@
             </div>
           </a>
         </div>
-      </div>
-      <!-- ------------------------------- END BANNER -------------------------------- -->
+      </section>
+      <!-- END BANNER -->
 
-      <!-- -------------------------------- INTRO -------------------------------- -->
+      <!-- INTRO -->
       <section class="p-intro" id="intro">
         <div class="p-intro__container">
           <div class="p-intro__wrapper">
@@ -884,28 +884,32 @@
           </div>
         </div>
       </section>
-      <!-- -------------------------------- END INTRO -------------------------------- -->
+      <!-- END INTRO -->
 
-      <!-- ------------------------------ END VIDEO ------------------------------ -->
+      <!-- END VIDEO -->
       <section class="p-banner" id="video">
         <div class="p-banner__container">
           <a href="#" class="p-banner__bg2">
-            <figure>
+            <!-- <figure>
               <img src="./assets/images/iconhome.png" alt="iconHome" />
               <img src="./assets/images/iconhome-sp.png" alt="iconHome-sp" />
-            </figure>
+            </figure> -->
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/images/iconhome-sp.png">
+              <img src="./assets/images/iconhome.png" alt="iconHome">
+            </picture>
           </a>
-
+          <h2 class="p-banner__title">さわやかハッカ油で虫除け対策のイメージ写真</h2>
         </div>
       </section>
-      <!-- -------------------------------- VIDEO -------------------------------- -->
     </main>
+    <!-- VIDEO -->
 
-    <!-- ------------------------------- FOOTER -------------------------------- -->
-    <footer class="l-footer">
-      <div class="l-footer__container">
-        <div class="l-footer__wrapper">
-          <ul class="l-footer__contact">
+    <!-- FOOTER -->
+    <footer class="c-footer">
+      <div class="c-footer__container">
+        <div class="c-footer__wrapper">
+          <ul class="c-footer__contact">
             <li>
               <p>商品に関するお問い合わせは</p>
             </li>
@@ -919,7 +923,7 @@
               </p>
             </li>
           </ul>
-          <div class="l-footer__logo">
+          <div class="c-footer__logo">
             <a href="#">
               <figure>
                 <img src="./assets/images/logo_kenei.gif" alt="logo_kenei" />
@@ -930,7 +934,11 @@
         </div>
       </div>
     </footer>
-    <!-- ----------------------------- END FOOTER ------------------------------ -->
+    <!-- END FOOTER -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/scripts/app.js"></script>
   </div>
 </body>
